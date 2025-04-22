@@ -2,7 +2,6 @@ import { createProduct } from "@/lib/data/products-postgres.data";
 // import { createProduct } from "@/lib/data/products-prisma.data";
 
 export default async function CreateProductPage() {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   return (
     <div className="flex flex-col items-center gap-6">
       <h1>Create Product</h1>
