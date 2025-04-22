@@ -1,4 +1,5 @@
-import { createProduct } from "@/lib/data/products.data";
+import { createProduct } from "@/lib/data/products-postgres.data";
+// import { createProduct } from "@/lib/data/products-prisma.data";
 
 export default async function CreateProductPage() {
   return (

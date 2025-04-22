@@ -1,7 +1,9 @@
-import { getProducts } from "@/lib/data/products.data";
+import { getProducts } from "@/lib/data/products-postgres.data";
+// import { getProducts } from "@/lib/data/products-prisma.data";
 
 export default async function ProductsPage() {
   const products = await getProducts();
+  // const products = await getProducts();
 
   return (
     <div className="flex flex-col items-center gap-6">
