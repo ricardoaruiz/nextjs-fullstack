@@ -3,12 +3,12 @@
 import { revalidateTag, unstable_cache } from "next/cache";
 
 import { redirect } from "next/navigation";
-import prisma from "../prisma";
+import db from "../db";
 
 export const getProducts = unstable_cache(
   async () => {
     console.log("getProducts called");
-    return prisma.product.findMany();
+    return db.product.findMany();
   },
   ["products"],
   {
@@ -20,7 +20,7 @@ export const getProducts = unstable_cache(
 export const createProduct = async (formData: FormData) => {
   const data = Object.fromEntries(formData.entries());
 
-  await prisma.product.create({
+  await db.product.create({
     data: {
       name: data.name as string,
     },
