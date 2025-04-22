@@ -8,7 +8,7 @@ export default function ProductsLayout({
   return (
     <section>
       <ProductMenu />
-      <div className="p-4">{children}</div>
+      <div className="p-4 container mx-auto">{children}</div>
     </section>
   );
 }
